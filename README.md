@@ -17,3 +17,7 @@ Creación de una aplicación web interactiva para compartir GIFs animados, ponie
 
 * [Giphy API](https://developers.giphy.com/)
 * [RecordRTC](https://recordrtc.org/)
+
+## Ver el sitio
+
+Puedes acceder al sitio haciendo [click aqui](https://belenkorobka.github.io/gifos/)
