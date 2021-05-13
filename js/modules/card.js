@@ -482,15 +482,16 @@ function openModal(index, gifs, buttonId, url) {
     if(buttonId === '-trending' || buttonId === '-search') {
         favoritesStorage = localStorage.getItem('favorites')
         let favorites = JSON.parse(favoritesStorage)
-
-        for (let i = 0; i < favorites.length; i++) {
-            if(favorites[i].id === gifs[index].id) {
-                modalButtons1Svg[index].innerHTML = `
-                <g data-name="00-UI-Kit">
-                    <rect width="32" height="32" rx="6" ry="6" style="isolation:isolate" fill="#fff" opacity=".7"/>
-                    <path d="M16.28 9.5a5.11 5.11 0 117.22 7.22l-6.94 7a.79.79 0 01-1.12 0l-6.94-7a5.11 5.11 0 017.22-7.22l.28.27z" fill="#572EE5" fill-opacity=".7"/>
-                </g>`
-            }   
+        if(favorites) {
+            for (let i = 0; i < favorites.length; i++) {
+                if(favorites[i].id === gifs[index].id) {
+                    modalButtons1Svg[index].innerHTML = `
+                    <g data-name="00-UI-Kit">
+                        <rect width="32" height="32" rx="6" ry="6" style="isolation:isolate" fill="#fff" opacity=".7"/>
+                        <path d="M16.28 9.5a5.11 5.11 0 117.22 7.22l-6.94 7a.79.79 0 01-1.12 0l-6.94-7a5.11 5.11 0 017.22-7.22l.28.27z" fill="#572EE5" fill-opacity=".7"/>
+                    </g>`
+                }   
+            }
         }
 
         modalButtons1[index].addEventListener('click', () => {
